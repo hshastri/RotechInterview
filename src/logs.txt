@@ -1,0 +1,4 @@
+Apr 26, 2023 6:34:40 PM com.example.demo.HelloController hello
+INFO: GET: 'Hello, World!
+Apr 26, 2023 6:34:40 PM com.example.demo.HelloController hello
+INFO: GET: 'Hello, World!'
