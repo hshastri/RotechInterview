@@ -1,7 +1,5 @@
 package com.example.demo;
 
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,11 +12,12 @@ import java.util.logging.SimpleFormatter;
 
 @RestController
 public class HelloController {
-
+    // Initialize a logger to log into logs.txt file in the src folder
     Logger logger = Logger.getLogger(HelloController.class.getName());
 
     @GetMapping("/hello")
     public String hello() {
+        //the below code uses FileHandler to log messages into the log file.
         FileHandler fh;
 
         try {
@@ -37,7 +36,9 @@ public class HelloController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //logs the message into the console
         logger.info("GET: 'Hello, World!'");
+        // GET the string "Hello, World!"
         return "Hello, World!";
 
     }
